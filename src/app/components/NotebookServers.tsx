@@ -449,7 +449,7 @@ export function NotebookServers() {
                         <Filter className="h-4 w-4" />
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
+                    <DropdownMenuContent align="start">
                       <DropdownMenuItem>
                         <Edit className="ml-2 h-4 w-4" />
                         ویرایش
