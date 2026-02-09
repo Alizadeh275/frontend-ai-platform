@@ -160,10 +160,10 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                 <div>
                   <Label htmlFor="workspace">پروژه / Workspace *</Label>
                   <Select value={workspace} onValueChange={setWorkspace}>
-                    <SelectTrigger dir="rtl" className="mt-2">
+                    <SelectTrigger className="mt-2">
                       <SelectValue placeholder="انتخاب پروژه" />
                     </SelectTrigger>
-                    <SelectContent dir="rtl">
+                    <SelectContent>
                       <SelectItem value="deep-learning">
                         Deep Learning
                       </SelectItem>
@@ -339,10 +339,10 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                     <div>
                       <Label>نوع GPU</Label>
                       <Select value={gpuType} onValueChange={setGpuType}>
-                        <SelectTrigger dir="rtl" className="mt-2">
+                        <SelectTrigger className="mt-2">
                           <SelectValue placeholder="انتخاب نوع GPU" />
                         </SelectTrigger>
-                        <SelectContent dir="rtl">
+                        <SelectContent>
                           <SelectItem value="a100">
                             NVIDIA A100 (80GB)
                           </SelectItem>
@@ -411,10 +411,10 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                   <div>
                     <Label htmlFor="idleTimeout">زمان Timeout (ساعت)</Label>
                     <Select value={idleTimeout} onValueChange={setIdleTimeout}>
-                      <SelectTrigger dir="rtl" className="mt-2">
+                      <SelectTrigger className="mt-2">
                         <SelectValue />
                       </SelectTrigger>
-                      <SelectContent dir="rtl">
+                      <SelectContent>
                         <SelectItem value="0.5">30 دقیقه</SelectItem>
                         <SelectItem value="1">1 ساعت</SelectItem>
                         <SelectItem value="2">2 ساعت</SelectItem>
