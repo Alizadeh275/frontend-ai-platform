@@ -1,46 +1,76 @@
-import React, { useState } from 'react';
-import { X, Info, Cpu, HardDrive, Box, Settings, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { Label } from './ui/label';
-import { Slider } from './ui/slider';
+import React, { useState } from "react";
+import {
+  X,
+  Info,
+  Cpu,
+  HardDrive,
+  Box,
+  Settings,
+  Shield,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import { Slider } from "./ui/slider";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from './ui/select';
-import { Textarea } from './ui/textarea';
-import { Switch } from './ui/switch';
-import { Badge } from './ui/badge';
+} from "./ui/select";
+import { Textarea } from "./ui/textarea";
+import { Switch } from "./ui/switch";
+import { Badge } from "./ui/badge";
 
 interface CreateNotebookModalProps {
   onClose: () => void;
 }
 
 const dockerImages = [
-  { value: 'pytorch-2.1', label: 'PyTorch 2.1 + CUDA 11.8', description: 'pytorch/pytorch:2.1.0-cuda11.8' },
-  { value: 'tensorflow-2.15', label: 'TensorFlow 2.15 + GPU', description: 'tensorflow/tensorflow:2.15.0-gpu' },
-  { value: 'jupyter-datascience', label: 'Jupyter Data Science', description: 'jupyter/datascience-notebook:latest' },
-  { value: 'huggingface', label: 'HuggingFace Transformers', description: 'huggingface/transformers:latest' },
-  { value: 'custom', label: 'تصویر سفارشی', description: 'Custom Docker Image' },
+  {
+    value: "pytorch-2.1",
+    label: "PyTorch 2.1 + CUDA 11.8",
+    description: "pytorch/pytorch:2.1.0-cuda11.8",
+  },
+  {
+    value: "tensorflow-2.15",
+    label: "TensorFlow 2.15 + GPU",
+    description: "tensorflow/tensorflow:2.15.0-gpu",
+  },
+  {
+    value: "jupyter-datascience",
+    label: "Jupyter Data Science",
+    description: "jupyter/datascience-notebook:latest",
+  },
+  {
+    value: "huggingface",
+    label: "HuggingFace Transformers",
+    description: "huggingface/transformers:latest",
+  },
+  {
+    value: "custom",
+    label: "تصویر سفارشی",
+    description: "Custom Docker Image",
+  },
 ];
 
 export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
   const [step, setStep] = useState(1);
-  const [serverName, setServerName] = useState('');
-  const [workspace, setWorkspace] = useState('');
-  const [image, setImage] = useState('');
-  const [customImage, setCustomImage] = useState('');
+  const [serverName, setServerName] = useState("");
+  const [workspace, setWorkspace] = useState("");
+  const [image, setImage] = useState("");
+  const [customImage, setCustomImage] = useState("");
   const [cpuCores, setCpuCores] = useState([4]);
   const [memory, setMemory] = useState([16]);
   const [gpuCount, setGpuCount] = useState([1]);
-  const [gpuType, setGpuType] = useState('');
+  const [gpuType, setGpuType] = useState("");
   const [storage, setStorage] = useState([50]);
   const [enableGpu, setEnableGpu] = useState(true);
   const [autoShutdown, setAutoShutdown] = useState(true);
-  const [idleTimeout, setIdleTimeout] = useState('2');
+  const [idleTimeout, setIdleTimeout] = useState("2");
 
   const totalSteps = 4;
 
@@ -64,10 +94,19 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-2xl font-bold text-white">ایجاد سرور نوت‌بوک جدید</h2>
-              <p className="text-blue-100 mt-1">پیکربندی محیط Jupyter خود را تنظیم کنید</p>
+              <h2 className="text-2xl font-bold text-white">
+                ایجاد سرور نوت‌بوک جدید
+              </h2>
+              <p className="text-blue-100 mt-1">
+                پیکربندی محیط Jupyter خود را تنظیم کنید
+              </p>
             </div>
-            <Button variant="ghost" size="icon" onClick={onClose} className="text-white hover:bg-white/20">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={onClose}
+              className="text-white hover:bg-white/20"
+            >
               <X className="h-5 w-5" />
             </Button>
           </div>
@@ -76,7 +115,9 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
           <div className="flex items-center gap-2 mt-6">
             {[1, 2, 3, 4].map((s) => (
               <React.Fragment key={s}>
-                <div className={`flex-1 h-2 rounded-full transition-all ${s <= step ? 'bg-white' : 'bg-white/30'}`}></div>
+                <div
+                  className={`flex-1 h-2 rounded-full transition-all ${s <= step ? "bg-white" : "bg-white/30"}`}
+                ></div>
               </React.Fragment>
             ))}
           </div>
@@ -96,7 +137,8 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
               <div className="flex items-start gap-3 p-4 bg-blue-50 dark:bg-blue-950/50 rounded-lg border border-blue-200 dark:border-blue-800">
                 <Info className="h-5 w-5 text-blue-600 dark:text-blue-400 mt-0.5" />
                 <div className="text-sm text-blue-900 dark:text-blue-200">
-                  نام و پروژه خود را برای سرور نوت‌بوک انتخاب کنید. این اطلاعات برای شناسایی و دسته‌بندی سرورها استفاده می‌شود.
+                  نام و پروژه خود را برای سرور نوت‌بوک انتخاب کنید. این اطلاعات
+                  برای شناسایی و دسته‌بندی سرورها استفاده می‌شود.
                 </div>
               </div>
 
@@ -122,11 +164,17 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                       <SelectValue placeholder="انتخاب پروژه" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="deep-learning">Deep Learning</SelectItem>
+                      <SelectItem value="deep-learning">
+                        Deep Learning
+                      </SelectItem>
                       <SelectItem value="nlp-research">NLP Research</SelectItem>
-                      <SelectItem value="computer-vision">Computer Vision</SelectItem>
+                      <SelectItem value="computer-vision">
+                        Computer Vision
+                      </SelectItem>
                       <SelectItem value="analytics">Analytics</SelectItem>
-                      <SelectItem value="generative-ai">Generative AI</SelectItem>
+                      <SelectItem value="generative-ai">
+                        Generative AI
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -150,7 +198,8 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
               <div className="flex items-start gap-3 p-4 bg-purple-50 dark:bg-purple-950/50 rounded-lg border border-purple-200 dark:border-purple-800">
                 <Box className="h-5 w-5 text-purple-600 dark:text-purple-400 mt-0.5" />
                 <div className="text-sm text-purple-900 dark:text-purple-200">
-                  تصویر Docker مناسب با نیازهای پروژه خود را انتخاب کنید. همه تصاویر شامل Jupyter Lab هستند.
+                  تصویر Docker مناسب با نیازهای پروژه خود را انتخاب کنید. همه
+                  تصاویر شامل Jupyter Lab هستند.
                 </div>
               </div>
 
@@ -164,14 +213,18 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                         onClick={() => setImage(img.value)}
                         className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
                           image === img.value
-                            ? 'border-blue-500 bg-blue-50 dark:bg-blue-950/50'
-                            : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+                            ? "border-blue-500 bg-blue-50 dark:bg-blue-950/50"
+                            : "border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600"
                         }`}
                       >
                         <div className="flex items-center justify-between">
                           <div>
-                            <div className="font-medium text-gray-900 dark:text-white">{img.label}</div>
-                            <code className="text-xs text-gray-500 dark:text-gray-400 font-mono">{img.description}</code>
+                            <div className="font-medium text-gray-900 dark:text-white">
+                              {img.label}
+                            </div>
+                            <code className="text-xs text-gray-500 dark:text-gray-400 font-mono">
+                              {img.description}
+                            </code>
                           </div>
                           {image === img.value && (
                             <Badge className="bg-blue-500">انتخاب شده</Badge>
@@ -182,7 +235,7 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                   </div>
                 </div>
 
-                {image === 'custom' && (
+                {image === "custom" && (
                   <div>
                     <Label htmlFor="customImage">آدرس تصویر سفارشی</Label>
                     <Input
@@ -204,7 +257,8 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
               <div className="flex items-start gap-3 p-4 bg-amber-50 dark:bg-amber-950/50 rounded-lg border border-amber-200 dark:border-amber-800">
                 <Cpu className="h-5 w-5 text-amber-600 dark:text-amber-400 mt-0.5" />
                 <div className="text-sm text-amber-900 dark:text-amber-200">
-                  منابع محاسباتی مورد نیاز را تخصیص دهید. می‌توانید بعداً این تنظیمات را تغییر دهید.
+                  منابع محاسباتی مورد نیاز را تخصیص دهید. می‌توانید بعداً این
+                  تنظیمات را تغییر دهید.
                 </div>
               </div>
 
@@ -289,9 +343,15 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                           <SelectValue placeholder="انتخاب نوع GPU" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="a100">NVIDIA A100 (80GB)</SelectItem>
-                          <SelectItem value="v100">NVIDIA V100 (32GB)</SelectItem>
-                          <SelectItem value="a6000">NVIDIA A6000 (48GB)</SelectItem>
+                          <SelectItem value="a100">
+                            NVIDIA A100 (80GB)
+                          </SelectItem>
+                          <SelectItem value="v100">
+                            NVIDIA V100 (32GB)
+                          </SelectItem>
+                          <SelectItem value="a6000">
+                            NVIDIA A6000 (48GB)
+                          </SelectItem>
                           <SelectItem value="t4">NVIDIA T4 (16GB)</SelectItem>
                         </SelectContent>
                       </Select>
@@ -341,17 +401,20 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                       سرور در صورت عدم فعالیت به طور خودکار متوقف شود
                     </p>
                   </div>
-                  <Switch checked={autoShutdown} onCheckedChange={setAutoShutdown} />
+                  <Switch
+                    checked={autoShutdown}
+                    onCheckedChange={setAutoShutdown}
+                  />
                 </div>
 
                 {autoShutdown && (
                   <div>
                     <Label htmlFor="idleTimeout">زمان Timeout (ساعت)</Label>
                     <Select value={idleTimeout} onValueChange={setIdleTimeout}>
-                      <SelectTrigger className="mt-2">
+                      <SelectTrigger dir="rtl" className="mt-2">
                         <SelectValue />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent dir="rtl">
                         <SelectItem value="0.5">30 دقیقه</SelectItem>
                         <SelectItem value="1">1 ساعت</SelectItem>
                         <SelectItem value="2">2 ساعت</SelectItem>
@@ -390,26 +453,42 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
 
                 {/* Summary */}
                 <div className="p-4 rounded-lg bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 border border-blue-200 dark:border-blue-800">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">خلاصه پیکربندی</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+                    خلاصه پیکربندی
+                  </h4>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">نام سرور:</span>
-                      <span className="font-medium text-gray-900 dark:text-white">{serverName || 'تعریف نشده'}</span>
+                      <span className="text-gray-600 dark:text-gray-400">
+                        نام سرور:
+                      </span>
+                      <span className="font-medium text-gray-900 dark:text-white">
+                        {serverName || "تعریف نشده"}
+                      </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">پروژه:</span>
-                      <span className="font-medium text-gray-900 dark:text-white">{workspace || 'تعریف نشده'}</span>
+                      <span className="text-gray-600 dark:text-gray-400">
+                        پروژه:
+                      </span>
+                      <span className="font-medium text-gray-900 dark:text-white">
+                        {workspace || "تعریف نشده"}
+                      </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">منابع:</span>
+                      <span className="text-gray-600 dark:text-gray-400">
+                        منابع:
+                      </span>
                       <span className="font-medium text-gray-900 dark:text-white">
                         {cpuCores[0]} vCPU, {memory[0]} GB RAM
                         {enableGpu && `, ${gpuCount[0]} GPU`}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">Storage:</span>
-                      <span className="font-medium text-gray-900 dark:text-white">{storage[0]} GB</span>
+                      <span className="text-gray-600 dark:text-gray-400">
+                        Storage:
+                      </span>
+                      <span className="font-medium text-gray-900 dark:text-white">
+                        {storage[0]} GB
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -421,11 +500,7 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
         {/* Footer */}
         <div className="border-t border-gray-200 dark:border-gray-800 p-6 bg-gray-50 dark:bg-gray-900/50">
           <div className="flex items-center justify-between">
-            <Button
-              variant="outline"
-              onClick={prevStep}
-              disabled={step === 1}
-            >
+            <Button variant="outline" onClick={prevStep} disabled={step === 1}>
               <ChevronRight className="ml-2 h-4 w-4" />
               قبلی
             </Button>
