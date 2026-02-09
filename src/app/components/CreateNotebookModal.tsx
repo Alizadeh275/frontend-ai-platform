@@ -160,10 +160,10 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                 <div>
                   <Label htmlFor="workspace">پروژه / Workspace *</Label>
                   <Select value={workspace} onValueChange={setWorkspace}>
-                    <SelectTrigger className="mt-2">
+                    <SelectTrigger dir="rtl" className="mt-2">
                       <SelectValue placeholder="انتخاب پروژه" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent dir="rtl">
                       <SelectItem value="deep-learning">
                         Deep Learning
                       </SelectItem>
