@@ -163,7 +163,7 @@ export function Layout({
                   <ChevronDown className="h-4 w-4 opacity-50 hidden md:block" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-42">
+              <DropdownMenuContent align="center" className="w-42">
                 <DropdownMenuItem>پروفایل</DropdownMenuItem>
                 <DropdownMenuItem>تنظیمات حساب کاربری</DropdownMenuItem>
                 <DropdownMenuItem>مستندات API</DropdownMenuItem>
