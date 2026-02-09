@@ -442,6 +442,7 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                 <div>
                   <Label>اسکریپت راه‌اندازی (اختیاری)</Label>
                   <Textarea
+                    dir="ltr"
                     placeholder="#!/bin/bash&#10;pip install -r requirements.txt"
                     className="mt-2 font-mono text-sm"
                     rows={4}
