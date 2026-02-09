@@ -339,10 +339,10 @@ export function CreateNotebookModal({ onClose }: CreateNotebookModalProps) {
                     <div>
                       <Label>نوع GPU</Label>
                       <Select value={gpuType} onValueChange={setGpuType}>
-                        <SelectTrigger className="mt-2">
+                        <SelectTrigger dir="rtl" className="mt-2">
                           <SelectValue placeholder="انتخاب نوع GPU" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent dir="rtl">
                           <SelectItem value="a100">
                             NVIDIA A100 (80GB)
                           </SelectItem>
