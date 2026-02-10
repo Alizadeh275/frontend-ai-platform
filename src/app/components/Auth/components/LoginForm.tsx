@@ -78,8 +78,8 @@ export function LoginForm({ visible }: { visible: boolean }) {
         className={`w-full py-2 rounded-lg shadow-md flex items-center justify-center gap-2 transition
           ${
             loading
-              ? "bg-blue-400 cursor-not-allowed opacity-80"
-              : "bg-gradient-to-r from-blue-500 to-blue-600 hover:brightness-110"
+              ? "bg-gradient-to-r from-blue-700 to-purple-700 cursor-not-allowed"
+              : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg"
           }
           text-white
         `}

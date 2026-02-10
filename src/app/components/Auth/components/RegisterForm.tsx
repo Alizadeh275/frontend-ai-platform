@@ -128,8 +128,8 @@ export function RegisterForm({ visible, onSuccess }: Props) {
         className={`w-full py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg transition-all duration-300 shadow-md flex items-center justify-center gap-2 font-medium
           ${
             loading
-              ? "cursor-not-allowed opacity-70"
-              : "hover:from-blue-600 hover:to-blue-700 hover:shadow-lg"
+              ? "bg-gradient-to-r from-blue-700 to-purple-700 cursor-not-allowed"
+              : "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg"
           }`}
       >
         {loading ? (

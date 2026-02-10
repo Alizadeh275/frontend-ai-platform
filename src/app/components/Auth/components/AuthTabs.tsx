@@ -12,7 +12,7 @@ export function AuthTabs({ isLogin, onChange }: Props) {
         onClick={() => onChange(true)}
         className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 font-medium transition-all border-b-2 ${
           isLogin
-            ? "border-blue-500 text-blue-600 bg-blue-50"
+            ? "bg-gradient-to-l from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 text-blue-600 dark:text-blue-400 shadow-sm"
             : "border-transparent text-gray-600 hover:bg-gray-50"
         }`}
       >
@@ -24,7 +24,7 @@ export function AuthTabs({ isLogin, onChange }: Props) {
         onClick={() => onChange(false)}
         className={`flex-1 flex items-center justify-center gap-2 px-6 py-4 font-medium transition-all border-b-2 ${
           !isLogin
-            ? "border-blue-500 text-blue-600 bg-blue-50"
+            ? "bg-gradient-to-l from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 text-blue-600 dark:text-blue-400 shadow-sm"
             : "border-transparent text-gray-600 hover:bg-gray-50"
         }`}
       >

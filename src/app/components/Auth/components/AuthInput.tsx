@@ -16,7 +16,7 @@ export function AuthInput({
   return (
     <div>
       <label className="flex items-center gap-2 text-sm font-medium mb-2">
-        <div className="p-1.5 bg-blue-100 rounded-lg">{labelIcon}</div>
+        <div className="p-1.5 bg-purple-100 rounded-lg">{labelIcon}</div>
         {label}
       </label>
 
@@ -28,7 +28,7 @@ export function AuthInput({
         )}
         <input
           {...inputProps}
-          className="w-full px-12 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-12 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
       </div>
 
