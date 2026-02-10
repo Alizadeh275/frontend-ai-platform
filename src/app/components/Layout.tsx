@@ -25,6 +25,7 @@ import {
 } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "./ui/avatar";
 import { Badge } from "./ui/badge";
+import LogoutModal from "@/app/components/Auth/components/LogoutModal";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -42,6 +43,7 @@ export function Layout({
   toggleTheme,
 }: LayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [logoutOpen, setLogoutOpen] = useState(false);
 
   const navigation = [
     { id: "dashboard", name: "داشبورد اصلی", icon: LayoutDashboard },
@@ -167,7 +169,10 @@ export function Layout({
                 <DropdownMenuItem>پروفایل</DropdownMenuItem>
                 <DropdownMenuItem>تنظیمات حساب کاربری</DropdownMenuItem>
                 <DropdownMenuItem>مستندات API</DropdownMenuItem>
-                <DropdownMenuItem className="text-red-600">
+                <DropdownMenuItem
+                  className="text-red-600"
+                  onClick={() => setLogoutOpen(true)}
+                >
                   خروج از سیستم
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -250,6 +255,8 @@ export function Layout({
           onClick={() => setSidebarOpen(false)}
         />
       )}
+
+      <LogoutModal open={logoutOpen} setOpen={setLogoutOpen} />
     </div>
   );
 }
