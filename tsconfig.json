@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    /* Core */
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    /* React */
+    "jsx": "react-jsx",
+
+    /* Paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* Interop (fix React import error) */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* Vite recommendation */
+    "skipLibCheck": true,
+    "strict": false,
+
+    /* Quality of life */
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": ["src"]
+}
