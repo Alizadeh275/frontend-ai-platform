@@ -406,10 +406,16 @@ export function NotebookServers() {
                 <div className="flex lg:flex-col gap-2">
                   {server.status === "running" ? (
                     <>
-                      <Button className="flex-1 lg:flex-none bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white">
+                      <Button
+                        className="flex-1 lg:flex-none bg-gradient-to-r from-green-600 to-emerald-600 text-white"
+                        onClick={() =>
+                          window.open(`/notebook/${server.id}`, "_blank")
+                        }
+                      >
                         <ExternalLink className="ml-2 h-4 w-4" />
                         باز کردن Jupyter
                       </Button>
+
                       <Button variant="outline" size="icon">
                         <Terminal className="h-4 w-4" />
                       </Button>
