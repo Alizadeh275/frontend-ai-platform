@@ -54,7 +54,7 @@ export function TextCell({
     <div
       className={`cursor-pointer group relative mb-5 rounded-lg transition-shadow border ${
         isSelected
-          ? "border-blue-500 shadow-md"
+          ? "border-purple-500 shadow-md"
           : "border-gray-200 hover:shadow-md"
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -71,7 +71,7 @@ export function TextCell({
           ${isSelected ? "opacity-100" : "opacity-0"}
           ${
             isSelected
-              ? "bg-blue-50 border-blue-300"
+              ? "bg-purple-50 border-blue-300"
               : "bg-gray-100 border-gray-200"
           }
         `}

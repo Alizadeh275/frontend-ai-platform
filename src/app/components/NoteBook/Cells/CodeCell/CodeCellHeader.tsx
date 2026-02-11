@@ -121,7 +121,7 @@ export function CodeCellHeader({
             ${
               executionStatus === "running"
                 ? "bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-sm"
-                : "bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white shadow-sm hover:shadow"
+                : "bg-gradient-to-r from-purple-500 to-purple-500 hover:from-purple-600 hover:to-purple-600 text-white shadow-sm hover:shadow"
             }`}
         >
           {executionStatus === "running" ? (

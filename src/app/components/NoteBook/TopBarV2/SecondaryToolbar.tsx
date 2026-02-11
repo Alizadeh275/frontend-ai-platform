@@ -50,7 +50,7 @@ export function SecondaryToolbar({
             className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-all duration-200 group"
           >
             <div className="flex items-center gap-1.5">
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400"></div>
+              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-purple-400"></div>
               <span>افزودن کد</span>
             </div>
             <Plus className="w-4 h-4 text-gray-400 group-hover:text-purple-500" />
@@ -108,7 +108,7 @@ export function SecondaryToolbar({
         <div className="flex items-center gap-2 bg-white rounded-full border border-gray-200/80 shadow-sm px-2 py-1">
           <button
             onClick={onRunAll}
-            className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 shadow-sm hover:shadow transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-purple-500 hover:from-purple-600 hover:to-purple-600 shadow-sm hover:shadow transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             title="اجرای همه سلول‌ها"
             disabled={!isConnected}
           >

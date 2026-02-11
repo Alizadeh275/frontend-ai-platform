@@ -6,7 +6,7 @@ const tabs = [
     id: "files",
     icon: FolderOpen,
     label: "فایل‌ها",
-    color: "from-purple-500 to-cyan-400",
+    color: "from-purple-500 to-purple-400",
   },
   {
     id: "toc",

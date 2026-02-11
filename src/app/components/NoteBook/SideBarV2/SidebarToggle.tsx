@@ -20,7 +20,7 @@ export function SidebarToggle({
         ) : (
           <PanelRightOpen className="w-5 h-5 text-gray-700 group-hover:text-purple-600 transition-colors" />
         )}
-        <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <div className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-gradient-to-r from-purple-500 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></div>
       </div>
     </button>
   );
