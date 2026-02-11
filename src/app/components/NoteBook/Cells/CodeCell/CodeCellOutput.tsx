@@ -21,7 +21,7 @@ export function CodeCellOutput({
     <div
       className={`border-t transition-colors ${
         isSelected
-          ? "border-blue-100/50 bg-gradient-to-b from-blue-50/20 to-white"
+          ? "border-purple-100/50 bg-gradient-to-b from-purple-50/20 to-white"
           : "border-gray-100 bg-gray-50/50"
       }`}
     >

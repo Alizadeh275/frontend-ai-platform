@@ -98,7 +98,7 @@ export function MainHeader({
         {/* RAM Usage */}
         <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-gray-100/50 to-gray-50/30 border border-gray-200/80 shadow-sm">
           <div className="flex items-center gap-1.5">
-            <Cpu className="w-4 h-4 text-blue-500" />
+            <Cpu className="w-4 h-4 text-purple-500" />
             <div className="text-xs">
               <div className="font-medium text-gray-700">رم: {ramUsage}</div>
             </div>
@@ -158,7 +158,7 @@ export function MainHeader({
         </div>
 
         {/* Share Button */}
-        <button className="cursor-pointer flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 shadow-sm hover:shadow transition-all duration-200">
+        <button className="cursor-pointer flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 shadow-sm hover:shadow transition-all duration-200">
           <Share2 className="w-4 h-4" />
           اشتراک‌گذاری
         </button>
@@ -166,7 +166,7 @@ export function MainHeader({
         {/* User Profile */}
         <div className="flex items-center gap-2">
           <div
-            className="cursor-pointer w-9 h-9 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full flex items-center justify-center shadow-sm hover:shadow transition-shadow"
+            className="cursor-pointer w-9 h-9 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full flex items-center justify-center shadow-sm hover:shadow transition-shadow"
             title={username ?? "کاربر"}
           >
             <User className="w-5 h-5 text-white" />

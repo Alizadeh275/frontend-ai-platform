@@ -20,7 +20,7 @@ export function MenuDropdown({
     return (
       <div className="relative group">
         <button
-          className="cursor-pointer px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50/50 rounded-lg transition-all duration-200 flex items-center gap-1"
+          className="cursor-pointer px-3 py-2 text-sm font-medium text-gray-700 hover:text-purple-600 hover:bg-purple-50/50 rounded-lg transition-all duration-200 flex items-center gap-1"
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
         >
@@ -34,7 +34,7 @@ export function MenuDropdown({
           {items.map((item, i) => (
             <button
               key={i}
-              className="cursor-pointer w-full text-right px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-l hover:from-blue-50 hover:to-white border-b border-gray-100/50 last:border-0 transition-colors"
+              className="cursor-pointer w-full text-right px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-l hover:from-purple-50 hover:to-white border-b border-gray-100/50 last:border-0 transition-colors"
             >
               {item}
             </button>

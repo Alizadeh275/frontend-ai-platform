@@ -21,7 +21,7 @@ export function AddCellButtons({
     >
       <div
         className={`flex items-center gap-2 rounded-full border bg-white px-2 py-1 shadow-sm
-          ${isSelected ? "border-blue-500" : "border-gray-300"}
+          ${isSelected ? "border-purple-500" : "border-gray-300"}
         `}
       >
         <button
@@ -29,7 +29,7 @@ export function AddCellButtons({
             e.stopPropagation();
             onAddBelowCode?.();
           }}
-          className="flex items-center gap-1 text-xs text-gray-700 hover:text-blue-600"
+          className="flex items-center gap-1 text-xs text-gray-700 hover:text-purple-600"
         >
           <span className="text-sm leading-none">＋</span>
           کد

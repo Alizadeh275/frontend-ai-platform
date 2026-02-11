@@ -65,7 +65,7 @@ export function CodeCell({
       className={`group relative mb-5 rounded-lg border transition-shadow
         ${
           isSelected
-            ? "border-blue-500 shadow-md"
+            ? "border-purple-500 shadow-md"
             : "border-gray-200 hover:shadow-md"
         }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -77,7 +77,7 @@ export function CodeCell({
         className={`absolute -top-4 right-3 z-10 flex gap-1 rounded-md border px-1 py-0.5 shadow-sm
           ${
             isSelected
-              ? "opacity-100 bg-blue-50 border-blue-300"
+              ? "opacity-100 bg-purple-50 border-purple-300"
               : "opacity-0 bg-gray-100 border-gray-200"
           }`}
       >

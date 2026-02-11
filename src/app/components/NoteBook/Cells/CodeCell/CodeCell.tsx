@@ -58,7 +58,7 @@ export function CodeCell({
         className={`rounded-xl border transition-all duration-200 overflow-hidden
           ${
             isSelected
-              ? "border-blue-400/50 shadow-lg shadow-blue-100/50 bg-white"
+              ? "border-purple-400/50 shadow-lg shadow-purple-100/50 bg-white"
               : "border-gray-200/80 hover:border-gray-300 hover:shadow-md bg-white/95"
           }`}
       >

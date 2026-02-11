@@ -21,7 +21,7 @@ export function CodeCellEditor({
     <div className="p-1">
       <div
         className={`relative rounded-lg overflow-hidden transition-all duration-200 ${
-          isSelected ? "ring-1 ring-blue-200/50" : ""
+          isSelected ? "ring-1 ring-purple-200/50" : ""
         }`}
       >
         {/* Editor Line Numbers Background */}

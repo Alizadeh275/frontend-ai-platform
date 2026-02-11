@@ -66,19 +66,19 @@ export function FilesTab({
               <>
                 <button
                   onClick={() => toggleFolder(item.path + "/" + item.name)}
-                  className="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-gradient-to-l hover:from-blue-50/50 hover:to-white transition-all group"
+                  className="w-full flex items-center gap-2 px-3 py-2.5 rounded-lg hover:bg-gradient-to-l hover:from-purple-50/50 hover:to-white transition-all group"
                 >
                   {expandedFolders.has(item.path + "/" + item.name) ? (
-                    <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-blue-500" />
+                    <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-purple-500" />
                   ) : (
-                    <ChevronLeft className="w-4 h-4 text-gray-500 group-hover:text-blue-500" />
+                    <ChevronLeft className="w-4 h-4 text-gray-500 group-hover:text-purple-500" />
                   )}
 
-                  <div className="w-6 h-6 rounded-lg bg-gradient-to-r from-blue-100 to-blue-50 flex items-center justify-center">
-                    <Folder className="w-4 h-4 text-blue-500" />
+                  <div className="w-6 h-6 rounded-lg bg-gradient-to-r from-purple-100 to-purple-50 flex items-center justify-center">
+                    <Folder className="w-4 h-4 text-purple-500" />
                   </div>
 
-                  <span className="text-sm font-medium text-gray-700 group-hover:text-blue-600">
+                  <span className="text-sm font-medium text-gray-700 group-hover:text-purple-600">
                     {item.name}
                   </span>
                 </button>

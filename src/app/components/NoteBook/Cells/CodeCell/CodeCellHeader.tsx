@@ -45,7 +45,7 @@ export function CodeCellHeader({
       className={`flex items-center justify-between px-4 py-3 transition-colors
         ${
           isSelected
-            ? "bg-gradient-to-r from-blue-50/80 to-gray-50/80 border-b border-blue-100/50"
+            ? "bg-gradient-to-r from-purple-50/80 to-gray-50/80 border-b border-purple-100/50"
             : "bg-gradient-to-r from-gray-50/50 to-gray-50/30 border-b border-gray-100"
         }`}
     >
@@ -121,7 +121,7 @@ export function CodeCellHeader({
             ${
               executionStatus === "running"
                 ? "bg-gradient-to-r from-amber-500 to-amber-600 text-white shadow-sm"
-                : "bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white shadow-sm hover:shadow"
+                : "bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 text-white shadow-sm hover:shadow"
             }`}
         >
           {executionStatus === "running" ? (

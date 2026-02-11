@@ -14,7 +14,7 @@ export function TocTab() {
       </div>
 
       <div className="mt-4">
-        <div className="text-sm font-medium text-gray-800 pr-2 py-2 px-3 rounded-lg bg-gradient-to-r from-blue-50/50 to-white border border-blue-100/50">
+        <div className="text-sm font-medium text-gray-800 pr-2 py-2 px-3 rounded-lg bg-gradient-to-r from-purple-50/50 to-white border border-purple-100/50">
           نتایج
         </div>
       </div>
