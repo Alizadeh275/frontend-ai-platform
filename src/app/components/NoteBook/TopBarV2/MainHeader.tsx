@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { MenuDropdown } from "./MenuDropdown";
+import { ConfirmLogoutModal } from "@/app/components/Auth/components/ConfirmLogoutModal";
 
 interface MainHeaderProps {
   projectName: string;
@@ -181,6 +182,10 @@ export function MainHeader({
           </button>
         </div>
       </div>
+      <ConfirmLogoutModal
+        open={openLogoutConfirm}
+        setOpen={setOpenLogoutConfirm}
+      />
     </div>
   );
 }
