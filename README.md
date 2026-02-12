@@ -5,7 +5,7 @@
 
   ## Running the code
 
-  Run `npm i` to install the dependencies.
+  Run `yarn i` to install the dependencies.
 
-  Run `npm run dev` to start the development server.
+  Run `yarn run dev` to start the development server.
   
