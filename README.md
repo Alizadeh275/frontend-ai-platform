@@ -1,9 +1,24 @@
+# Enterprise AI Platform Dashboard
 
-  # Enterprise AI Platform Dashboard
+## Screenshots
 
-  ## Running the code
+### Main Dashboard
+![Main Dashboard](screenshots/main-dashboard.png)
 
-  Run `yarn i` to install the dependencies.
+### GPU Monitoring
+![GPU Monitoring](screenshots/gpu-motitoring.png)
 
-  Run `yarn run dev` to start the development server.
-  
+### Notebooks List
+![Notebooks List](screenshots/notebooks-list.png)
+
+### New Notebook
+![New Notebook](screenshots/new-notebook.png)
+
+### Colab Jupyter
+![Colab Jupyter](screenshots/colab-jupyter.png)
+
+## Running the code
+
+Run `yarn i` to install the dependencies.
+
+Run `yarn run dev` to start the development server.
